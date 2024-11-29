@@ -17,7 +17,7 @@ export OMP_NUM_THREADS=8                 # Adjust based on CPU cores
 srun --container-image=/shared/home/vinil/pytorch:23.04-py3.sqsh \
      --export=ALL \
      bash -c '
-         python /workspace/bert/run_pretraining.py \
+         python /workspace/transformers/run_pretraining.py \
          --model_type bert \
          --model_name_or_path bert-base-uncased \
          --do_train \
