@@ -14,7 +14,7 @@ export NCCL_SOCKET_IFNAME=ib0            # Use your IB interface (check with ifc
 export OMP_NUM_THREADS=8                 # Adjust based on CPU cores
 
 # Launch Pyxis container with distributed training
-srun --container-image=pytorch:23.04-py3.sqsh\
+srun --container-image=/shared/home/vinil/pytorch:23.04-py3.sqsh \
      --export=ALL \
      bash -c '
          python /workspace/bert/run_pretraining.py \
